@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #f6f7f8;
+}
+
+header{
+    background-image: url('../assets/interior-copia.jpg');
+
+    & .conteudo-interno {
+        width: 100%;
+        height: 100%;
+
+        & h1{
+            font-size: 2.25rem /* 36px */;
+            line-height: 2.5rem /* 40px */;
+        }
+
+        & span{
+            font-weight: 500;
+        }
+
+    }
+}

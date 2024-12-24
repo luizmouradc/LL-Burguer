@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <link rel="shortcut icon" href="./assets/favicon.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--importando a biblioteca de itens-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Meta tag og-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LL-Burger">
+    <meta property="og:image" content="http://127.0.0.1:5500/assets/logo.webp">
+    <meta property="og:description" content="Os melhores hamburgueres">
+    <meta property="og:site_name" content="LL-Burger">
+
+    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>LL Burgues</title>
+</head>
+<body>
+    
+    <!--Inicio do cabeçalho-->
+    <header class="w-full h-[420px]  bg-cover bg-center">
+
+        <div class=" conteudo-interno flex flex-col justify-center items-center">
+          <img src="./assets/logo.webp" alt="logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+
+          <h1 class="mt-4 mb-2 font-bold text-white">LL Burguer</h1>
+
+          <span class="text-white">Rua Sabor & Estilo, 123, Bairro Gourmet, Cidade Viva - SP</span>
+
+          <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+            <span>Seg á Dom - 18:00 as 22:00</span>
+          </div>
+        </div>
+      </header>
+    <!--Fim do cabeçalho-->
+
+    <!--Inicio do menu-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso MENU</h2>
+
+    <div id="menu">
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">Hambúrgueres</h2>
+        </div>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--hamburgues-->
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/LL-Classic.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">LL Classic</p>
+                    <p class="text-sm">Pão brioche tostado com manteiga, hambúrguer de carne bovina artesanal (150g), queijo cheddar derretido, alface americana crocante, fatias de tomate frescas e molho especial da LL-Burger (à base de maionese, páprica e ervas).</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$25,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="LL-Classic" data-preco="25.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Smash-Supreme.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Smash Supreme</p>
+                    <p class="text-sm">Pão de batata, dois smash burgers (80g cada) com borda crocante, queijo suíço, picles caseiros, cebola caramelizada, mostarda e ketchup.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$27,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Smash Supreme" data-preco="27.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>    
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/BBQ-Bacon.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">BBQ Bacon</p>
+                    <p class="text-sm">Pão australiano, hambúrguer de carne bovina (180g), queijo cheddar maturado, bacon crocante, anéis de cebola empanados e molho barbecue defumado.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$32,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="BBQ Bacon" data-preco="32.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Chicken Lovers.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Chicken Lovers</p>
+                    <p class="text-sm">Pão brioche, filé de frango empanado crocante, queijo prato, coleslaw (salada de repolho com cenoura e molho cremoso) e molho ranch.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$29,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Chicken Lovers" data-preco="29.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Veggie Bliss.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Veggie Bliss (Opção vegetariana)</p>
+                    <p class="text-sm">Pão integral com sementes, hambúrguer de grão-de-bico e ervas, queijo vegano ou muçarela, mix de folhas verdes, tomate confit e pasta de abacate temperada com limão e coentro.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$31,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Veggie Bliss" data-preco="31.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Spicy-LL-Jalapeño.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Spicy LL Jalapeño</p>
+                    <p class="text-sm">Pão de brioche com gergelim, hambúrguer de carne bovina (200g), queijo pepper jack, jalapeños em conserva, bacon picante e maionese de chipotle.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$30,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Spicy LL Jalapeño" data-preco="30.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Truffle-Delux.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Truffle Deluxe</p>
+                    <p class="text-sm">Pão brioche tostado, hambúrguer de carne bovina premium (200g), queijo gruyère derretido, cogumelos salteados no azeite trufado, rúcula fresca e maionese de trufa.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$39,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Truffle Deluxe" data-preco="39.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/hamburgues/Sweet-&-Savory.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Sweet & Savory</p>
+                    <p class="text-sm">Pão brioche com toque de mel, hambúrguer de carne bovina (150g), queijo brie derretido, bacon caramelizado, figos frescos ou chutney de figo e rúcula.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$37,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Sweet & Savory" data-preco="37.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!--Acompanhamentos -->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">Acompanhamentos</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="flex gap-2">
+                <img src="./assets/images/acompanhamentos/Batata-Rústica-com-Molho-de-Alho.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Batata Rústica com Molho de Alho</p>
+                    <p class="text-sm">Batatas rústicas temperadas com ervas finas, páprica e sal, servidas com um molho cremoso de alho.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$12,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Batata Rustica com Molho de Alho" data-preco="12.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/acompanhamentos/Nuggets-Crocantes.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Nuggets Crocantes</p>
+                    <p class="text-sm">Nuggets de frango empanados e fritos até ficarem dourados e crocantes, servidos com molho barbecue ou ketchup.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$15,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Nuggets Crocantes" data-preco="15.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/acompanhamentos/Batata-com-Bacon-e-Cheddar.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Batata com Bacon e Cheddar</p>
+                    <p class="text-sm">Batatas fritas cobertas com queijo cheddar derretido, pedacinhos de bacon crocante e cebolinha fresca.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$16,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Batata com Bacon e Cheddar" data-preco="16.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/acompanhamentos/Onion-Rings.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Onion Rings</p>
+                    <p class="text-sm">Anéis de cebola empanados e crocantes, com um toque especial de tempero da casa, acompanhados por molho ranch.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$14,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Onion Rings" data-preco="14.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Bebidas-->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">Bebidas</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <div class="flex gap-2">
+                <img src="./assets/images/bebidas/Pink-Lemonade.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Pink Lemonade</p>
+                    <p class="text-sm">Uma refrescante limonada rosa feita com suco de limão siciliano, um toque de framboesa natural e água gaseificada, finalizada com hortelã fresca e gelo.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$12,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Pink Lemonade" data-preco="12.90">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/bebidas/Milkshake-de-Doce-de-Leite-com-Flor-de-Sal.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold"> Milkshake de Doce de Leite com Flor de Sal</p>
+                    <p class="text-sm">Um cremoso milkshake feito com sorvete de baunilha, doce de leite artesanal e um toque de flor de sal para equilibrar os sabores. Servido com chantilly e um fio de doce de leite por cima.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$18,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name=" Milkshake de Doce de Leite com Flor de Sal" data-preco="18.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/bebidas/LL-Iced-Coffee.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">LL Iced Coffee</p>
+                    <p class="text-sm">Café gelado com leite, servido com gelo e adoçado com xarope de caramelo. Finalizado com creme batido e uma pitada de canela.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$14,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="LL Iced Coffee" data-preco="14.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/images/bebidas/Cha-Gelado-de-Hibisco-com-Frutas-Vermelhas.webp" alt="#" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Cha Gelado de Hibisco com Frutas Vermelhas</p>
+                    <p class="text-sm">Uma mistura refrescante de chá de hibisco com frutas vermelhas (morango, framboesa e mirtilo), adoçado suavemente com mel e servido com gelo. Finalizado com pedaços de frutas frescas e folhas de hortelã.</p>
+                </div>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$13,90</p>
+                    <button class="bg-gray-950 px-5 rounded adicionar-item-no-carrinha" data-name="Cha Gelado de Hibisco com Frutas Vermelhas" data-preco="13.90" >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fim do menu-->
+
+    <!--Inicio do modal-->
+    <div class="bg-black/80 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço da Entrega: </p>
+            <input type="text" placeholder="Digite seu endereço completo" id="address" class="w-full border-2 p-1 rounded my-1">
+            <p class="text-red-600 hidden" id="address-warn">Digite seu Endereço Completo!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-600 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+    <!--fim do modal-->
+
+    <footer class="w-full bg-red-700 py-3 fixed bottom-0 z-40 flex items-center justify-center" id="cart-btn">
+        <button class="flex items-center gap-2 text-white font-bold">
+            (<span id="cart-count">0</span>)
+            Veja Meu Carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
