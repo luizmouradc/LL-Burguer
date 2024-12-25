@@ -24,3 +24,8 @@ header{
 
     }
 }
+
+#cart-modal > div {
+    max-height: 80vh; 
+    overflow-y: auto; 
+}
