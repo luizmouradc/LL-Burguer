@@ -72,3 +72,4 @@ Para o desenvolvimento do LL-Burger, foram utilizadas as seguintes ferramentas:
   - Toastify (notificações).
 - **Editor de código:** VSCode.
 - **Git**
+- **NodeJs**
