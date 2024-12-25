@@ -3,6 +3,8 @@
 ## Sobre o projeto
 O LL-Burger é uma aplicação web desenvolvida para gerenciar o menu e os pedidos de uma lanchonete fictícia. Os clientes podem visualizar o cardápio com detalhes dos itens, adicionar produtos ao carrinho, revisar os pedidos e enviar uma solicitação via WhatsApp com endereço e itens selecionados.
 
+Acesse o projeto online em: [LL-Burger - Site Oficial](https://ll-burguer.vercel.app/)
+
 A aplicação utiliza HTML, CSS e JavaScript para a interface do usuário, além de bibliotecas externas para funcionalidades avançadas.
 
 ---
@@ -55,7 +57,7 @@ A aplicação utiliza HTML, CSS e JavaScript para a interface do usuário, além
 
 Aqui está um exemplo do funcionamento do projeto:
 
-![Visualização do menu](./assets/screenshots/menu-preview.jpg)
+![LL Burgues - Google Chrome 2024-12-24 16-41-07](https://github.com/user-attachments/assets/4cd9c3a8-1eb9-461d-83dc-23176bcb0737)
 
 ---
 
@@ -69,15 +71,4 @@ Para o desenvolvimento do LL-Burger, foram utilizadas as seguintes ferramentas:
   - Font Awesome (ícones).
   - Toastify (notificações).
 - **Editor de código:** VSCode.
-
----
-
-## Contribuição
-
-Contribuições são bem-vindas! Caso queira sugerir melhorias ou reportar problemas, envie um Pull Request ou crie uma Issue no repositório.
-
----
-
-## Licença
-
-Este projeto é distribuído sob a licença MIT.
+- **Git**
